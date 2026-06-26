@@ -23,7 +23,8 @@
 #Una linea
 
 """
-varias 
+varias
+otra    otra cosa 
 lineas 
 de codigo 
 """
@@ -71,3 +72,4 @@ string = "Niño"
 
 print("!Hola, python¡")
 print ("¡Hola, Python")
+
