@@ -29,7 +29,7 @@ e = 100//10
 f = 45%15
 g = 5**2
 
-#Operadores Logicos and - or - not
+#Operadores Logicos and (y) - or (o) - not (no)
 """
 Operadores LógicosCombinan múltiples condiciones para construir expresiones lógicas complejas
 and: Devuelve True si ambas condiciones son verdaderas.
@@ -50,6 +50,7 @@ elif(c==901 or f==0):
     print("se hizo real")
 else:
     print("ninguna de las anteriores condiciones son verdaderas")
+#fin bloque de condiciones anidadas
 
 print("fuera de las condicionales anidadas")
 
@@ -100,12 +101,29 @@ Operadores de Identidad y Pertenencia
 Verifican si dos variables apuntan al mismo objeto en memoria, o si un valor existe dentro de una secuencia.
 
 Identidad: is y is not (ej. x is y)
+
 Pertenencia: in y not in (ej. 'a' in 'manzana')
 """
 c = [10,2,3] #efx00001
 a = [1,2,3]  #efx00002
 b = c        #efx00001
 
+# is lo que valida es la posicion en la memoria va vb (va != vb) (va is not vb) = true b = c (b is not c) false (c is b) true
+b.append(5)
+for i in range(len(c)):
+    print(c[i])
+
+#padre / hija a, hijo b       hijo a is hijo b        false     porque estan en distintos lugares en la memoria
+if(b is c) :
+    print("b es igual a c")
+
+y=[0,1,2,3]
+
+z=[4]
+
+
+if(z[0] in y):
+    print("no es y")
 
 #string son arrays array con otro array
 manzana = "manzana"
@@ -132,8 +150,25 @@ elif(a is not b):
     print("a no es b o son dos variables que apuntan a un lugar de la memoria diferente")
     
     
-#Bits
-#basicamente es otra forma de escribir los operadores logicos pero con mayor simplicidad
+d1=[5,7,1,6]
+d2=d1
+d3=[5] 
+if(d2 is d1):
+    print("d2 apunta a d1, porque comparten el mismo lugar en la memoria")  
+    
+if(d3 is not d2):
+    print("d3 no es d2 porque, no comparten el mismo lugar de memoria")
+    
+d4=[2007,"febrero","8","Johan"]
+d5="8"
+d6=2008
+
+if(d5 in d4):
+    print("d5 es 8 y d4 contiene el 8 por lo tanto d5 esta en d4")
+    
+if(d6 not in d4):
+    print("d6 no esta dentro de d4") 
+
 """""
 Operadores a Nivel de Bits (Bitwise)Operan directamente con la representación binaria de los enteros.
 AND: &
@@ -159,6 +194,8 @@ if (5<b or c>2):
     print("las dos condicionales dieron verdadero")
 if (5<b) ^ (c>2):
     print("parce pues las dos dieron positivo por ende esto da negativo solo puede pasar una")
+if ( ~ a==5 ):
+    print("nada")
 
 #para que sirven el dezplasamiento de bits
 #Desplazamiento de bits izquierda para multiplicar, derecha para dividir. Estan 1=2. 0 = neutro
