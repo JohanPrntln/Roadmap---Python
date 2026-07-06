@@ -17,7 +17,7 @@
 
 #Operadores Aritmeticos +, -, *, /, %, **, //
 
-# 10/3 = 3.3333  el objetivo es tener el resultado completo 
+# 10/3 = 3.3333  el objetivo es tener el resultado completo el decimal
 # 10//3 = 3      el objetivo es eliminar la parte decimal del resulado
 # 10%3 = 1       el modulo devuelve el residuo de la division
 
@@ -41,7 +41,7 @@ not: Invierte el valor booleano (ej. not True es False).
 if(c==901 or f==0):
     print ("Se hizo real")
 
-#condicionales anidadas
+#condicionales en bloque
 if(a ==17 and b==3): # se tienen que cumplir las dos condiciones para que nos de un true
     print("Hola a = 17 y b =3 misterio resuelto")
 elif(a ==17):       
@@ -50,9 +50,9 @@ elif(c==901 or f==0):
     print("se hizo real")
 else:
     print("ninguna de las anteriores condiciones son verdaderas")
-#fin bloque de condiciones anidadas
+#fin bloque de condiciones en bloque
 
-print("fuera de las condicionales anidadas")
+print("fuera de las condicionales en bloque")
 
 if(not a==17):
     print ("Esta bien, pero no")
