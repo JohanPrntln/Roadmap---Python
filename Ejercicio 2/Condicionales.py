@@ -233,19 +233,23 @@ condicionales simples, anidadas
 # 2024 -> Sí
 # 2025 -> No
 
-año=int(input("Ingresa un año: "))
+# año=int(input("Ingresa un año: "))
 
-# 1900 ÷ 4 = 475 no es bisiesto
-# 2024 ÷ 4 = 506  es bisiesto 
-prueba=2024%400
-print(prueba)
+# # 1900 ÷ 4 = 475 no es bisiesto
+# # 2024 ÷ 4 = 506  es bisiesto 
 
-#if(año % 4 == 0 ):
 
-match año % 4:
-    case 0 :
-        if año % 100 : 
-    case _ :
+# #if(año % 4 == 0 ):
+
+# match año % 4:
+#     case 0 :
+#         if año % 100 == 0 : 
+#             if año % 400 == 0 :
+#                 print("Es bisiesto") 
+#             else:
+#                 print("No es bisiesto")
+#     case _ :
+#         print("No es bisiesto")
 
 
 
@@ -263,3 +267,112 @@ match año % 4:
 #         print("Miércoles")
 #     case _:
 #         print("Día no válido")
+
+# Ejercicio 3 - Calculadora de impuestos
+
+# Pide el salario.
+
+# Si gana
+
+# 0 - 2.000.000        -> 0%
+# 2.000.001 - 4.000.000 -> 10%
+# 4.000.001 - 8.000.000 -> 20%
+# Más de 8.000.000      -> 30%
+
+# Debes mostrar
+
+# Impuesto
+# Salario neto
+
+# salario=int(input("Ingrese su salario: "))
+
+# match salario:
+#     case salario if 0 <= salario <= 2000000:
+#         print(f"Salario neto: {salario} \n Impuesto aplicado 0%")
+#     case salario if 2000001 <= salario <= 4000000:
+#         impuesto = 0.10 * salario
+#         salarioNeto = salario - impuesto
+#         print(f"Salario neto : {salarioNeto} \n Impuesto aplicado del 10%")
+#     case salario if 4000001 <= salario <= 8000000:
+#         impuesto = 0.20 * salario 
+#         salarioNeto = salario - impuesto
+#         print(f"Salario neto : {salarioNeto} \n Impuesto aplicado del 20%")
+#     case salario if salario >= 8000000:
+#         impuesto = 0.30 * salario 
+#         salarioNeto = salario - impuesto
+#         print(f"Salario neto : {salarioNeto} \n Impuesto aplicado del 30%")
+
+# Ejercicio 4 - Login
+
+# Hay un usuario y contraseña correctos.
+
+# usuario = "admin"
+# password = "1234"
+
+# Pide ambos.
+
+# Debes validar:
+
+# usuario correcto y contraseña correcta
+# usuario correcto pero contraseña incorrecta
+# usuario inexistente
+
+# usuarioExistente = "admin"
+# passwordExistente = "1234"
+
+# usuario = input("Ingrese su usario: ")
+# password = input("Ingrese su contraseña: ")
+
+# if (usuario == usuarioExistente) & (password == passwordExistente):
+#     print(f"usuario correcto y contraseña correcta \n \n HOLAA ")
+    
+# elif (usuario == usuarioExistente) & (password != passwordExistente):
+#     print("usuario correcto pero contraseña incorrecta")
+# elif (usuario != usuarioExistente) & (password != passwordExistente):
+#     print("usuario inexistente")
+
+
+
+# Ejercicio 8 - Validación de contraseña
+
+# Debe cumplir:
+
+# mínimo 8 caracteres
+# una mayúscula
+# una minúscula
+# un número
+
+# Mostrar exactamente qué regla incumple.
+
+# Ejemplo
+
+# Le falta un número
+
+# o
+
+# Contraseña válida
+
+# Las regex (o expresiones regulares) son secuencias de caracteres que forman un patrón de búsqueda. Se utilizan principalmente para encontrar, validar, extraer o reemplazar texto dentro de cadenas de datos de manera rápida y eficiente
+import re
+mayuscula = r"[A-Z]+"
+minuscula = r"[a-z]+"
+numero = r"[0-9]+"
+password = input("Ingrese contraseña: ")
+
+
+if password.__len__() < 8 :
+    print(" tu contraseña debe tener mínimo 8 caracteres")
+else:
+    print("tu contraseña tiene 8 caracteres")
+if re.search(mayuscula, password):
+    print("Si contiene una Mayuscula")
+else:
+    print("No contiene mayuscula")
+if re.search(minuscula, password):
+    print("Si contiene minuscula")
+else:
+    print("No contiene minuscula")
+if re.search(numero, password):
+    print("Si contiene número")
+else: 
+    print("No contiene número")
