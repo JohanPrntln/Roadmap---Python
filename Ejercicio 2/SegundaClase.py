@@ -31,7 +31,7 @@ g = 5**2
 
 #Operadores Logicos and (y) - or (o) - not (no)
 """
-Operadores LógicosCombinan múltiples condiciones para construir expresiones lógicas complejas
+Operadores Lógicos Combinan múltiples condiciones para construir expresiones lógicas complejas
 and: Devuelve True si ambas condiciones son verdaderas.
 or: Devuelve True si al menos una condición es verdadera.
 not: Invierte el valor booleano (ej. not True es False).

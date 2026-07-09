@@ -1,4 +1,4 @@
-# - Utilizando las operaciones con operadores que tú quieras, crea ejemplos
+ # - Utilizando las operaciones con operadores que tú quieras, crea ejemplos
 #   que representen todos los tipos de estructuras de control que existan
 #   en tu lenguaje:
 #   Condicionales,
@@ -352,27 +352,91 @@ condicionales simples, anidadas
 
 # Contraseña válida
 
-# Las regex (o expresiones regulares) son secuencias de caracteres que forman un patrón de búsqueda. Se utilizan principalmente para encontrar, validar, extraer o reemplazar texto dentro de cadenas de datos de manera rápida y eficiente
-import re
-mayuscula = r"[A-Z]+"
-minuscula = r"[a-z]+"
-numero = r"[0-9]+"
-password = input("Ingrese contraseña: ")
+# # Las regex (o expresiones regulares) son secuencias de caracteres que forman un patrón de búsqueda. Se utilizan principalmente para encontrar, validar, extraer o reemplazar texto dentro de cadenas de datos de manera rápida y eficiente
+# import re
+# mayuscula = r"[A-Z]+"
+# minuscula = r"[a-z]+"
+# numero = r"[0-9]+"
+# password = input("Ingrese contraseña: ")
 
 
-if password.__len__() < 8 :
-    print(" tu contraseña debe tener mínimo 8 caracteres")
-else:
-    print("tu contraseña tiene 8 caracteres")
-if re.search(mayuscula, password):
-    print("Si contiene una Mayuscula")
-else:
-    print("No contiene mayuscula")
-if re.search(minuscula, password):
-    print("Si contiene minuscula")
-else:
-    print("No contiene minuscula")
-if re.search(numero, password):
-    print("Si contiene número")
-else: 
-    print("No contiene número")
+# if password.__len__() < 8 :
+#     print(" tu contraseña debe tener mínimo 8 caracteres")
+# else:
+#     print("tu contraseña tiene 8 caracteres")
+# if re.search(mayuscula, password):
+#     print("Si contiene una Mayuscula")
+# else:
+#     print("No contiene mayuscula")
+# if re.search(minuscula, password):
+#     print("Si contiene minuscula")
+# else:
+#     print("No contiene minuscula")
+# if re.search(numero, password):
+#     print("Si contiene número")
+# else: 
+#     print("No contiene número")
+
+
+
+# Ejercicio 20 - El "jefe" de condicionales
+
+# Construye un sistema de admisión para una universidad.
+
+# Pide:
+
+# Edad
+# Puntaje del examen
+# Promedio del colegio
+# Tiene beca (S/N)
+
+# Reglas:
+
+# Si es menor de 16 años → Rechazado.
+# Si el puntaje es menor de 250 → Rechazado.
+# Si el promedio es menor de 3.5 → Rechazado, excepto si tiene beca.
+# Si el puntaje es mayor o igual a 400 y el promedio es mayor o igual a 4.5 → Admitido con honores.
+# Si cumple los requisitos mínimos → Admitido.
+
+# Este ejercicio requiere combinar varias condiciones, usar if, elif, else de forma organizada y validar el orden de las reglas.
+# print("SISTEMA DE ADMINSION PARA LA UNIVERSIDAD")
+
+# Edad=int(input("Ingrese su edad: "))
+
+
+# if(Edad > 16):
+#     puntex=int(input("Ingrese el puntaje del examen: "))
+#     print("Cumple con la Edad")
+
+#     if(puntex >= 250):
+#         print("Cumple con el puntaje")
+#         prom=float(input("Ingresa tu promedio del colegio: "))
+
+#         if(prom >=4.5 and puntex >= 400):
+
+#             print("Felicidades admitido con honores")
+        
+#         elif(prom >= 3.5):
+            
+#             print("Cumple con el promedio")
+#         else:
+            
+#              beca=input("Tiene beca?: S / N : ")
+             
+#              if (prom < 3.5 and beca == "S"):
+                 
+#                print("Admitido por beca")
+               
+#              else:
+                 
+#                  print(" no fue admitido")
+            
+            
+#     else:
+#         print("No cumples con el puntaje minimo")
+    
+    
+    
+
+# else:
+#     print("Rechazado, eres menor de 16 años")
