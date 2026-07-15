@@ -367,33 +367,87 @@
 
 # Ejercicio 7: Suma de números pares
 
-# Calcula la suma de todos los números pares entre 1 y 100.
+# # Calcula la suma de todos los números pares entre 1 y 100.
 
-cont = 0
-acum = 0
-num = 100
+# cont = 0
+# acum = 0
+# num = 100
 
-while cont <= num:
-    if(cont % 2 == 0):
-        acum = cont + acum
-        print(acum)
-    cont+=1
+# while cont <= num:
+#     if(cont % 2 == 0):
+#         acum = cont + acum
+#         print(acum)
+#     cont+=1
 
-# Ejercicio 8: Producto de números
+# # Ejercicio 8: Producto de números
 
-# Solicita un número N y calcula el producto de los números desde 1 hasta N.
+# # Solicita un número N y calcula el producto de los números desde 1 hasta N.
 
-# Ejemplo:
+# # Ejemplo:
 
-# N = 5
+# # N = 5
 
-# Resultado = 1 × 2 × 3 × 4 × 5 = 120
+# # Resultado = 1 × 2 × 3 × 4 × 5 = 120
+
+# # num = int(input("Ingrese un número: "))
+# # cont = 1
+# # acum = 1
+
+# # while cont <= num:
+# #     acum = cont * acum
+# #     cont += 1
+# #     print(acum)
+
+# # Ejercicio 9: Promedio de notas
+
+# # Solicita 5 notas y calcula el promedio.
+
+# cont = 0
+
+# acum = 0
+# while cont < 5:
+#     cont+=1
+
+#     nota = float(input(f"Ingrese nota {cont}: "))
+
+#     acum = nota + acum
+
+
+# promedio = acum / cont
+# print(f"El promedio de sus notas es : {promedio}")
+   
+   
+
+# Ejercicio 13: Edad válida
+
+# Pide una edad y no permitas valores menores que 0 o mayores que 120, si ingresa una edad invalida no permitas que salga del bluce
+
+
+# a = True
+
+# while a: 
+#     edad = int(input("Ingrese edad: "))
+#     if (0 < edad < 120):
+#         print("Acceso aprobado")
+#         a = False
+#     else:
+#         print("Acceso denegado")
+
+ 
+
+    
+# Nivel 4 - Patrones
+# Ejercicio 16: Dibujar línea
+
+# Solicita un número N y muestra N asteriscos.
 
 num = int(input("Ingrese un número: "))
-cont = 1
-acum = 1
+cont = 0
+string = ""
 
-while cont <= num:
-    acum = cont * acum
-    cont += 1
-    print(acum)
+while cont < num:
+    cont+=1
+    string+="*"
+print(f"El número de asteriscos dibujados son {num} y se ve asi : {string}")
+
+    
