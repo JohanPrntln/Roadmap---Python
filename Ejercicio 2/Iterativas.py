@@ -439,15 +439,57 @@
 # Nivel 4 - Patrones
 # Ejercicio 16: Dibujar línea
 
-# Solicita un número N y muestra N asteriscos.
+# # Solicita un número N y muestra N asteriscos.
 
-num = int(input("Ingrese un número: "))
+# num = int(input("Ingrese un número: "))
+# cont = 0
+# string = ""
+
+# while cont < num:
+#     cont+=1
+#     string+="*"
+# print(f"El número de asteriscos dibujados son {num} y se ve asi : {string}")
+
+
+
+
+# Ejercicio 17: Triángulo rectángulo
+
+# Solicita un número N. 4
+
+#*
+#**
+#***
+# #****
+
+# num = int(input("Ingrese un número para dibujar el triángulo rectángulo: "))
+# cont = 0
+# string = ""
+
+# while cont < num:
+#     cont += 1
+#     conta2 = 0
+
+#     while conta2 < cont:      
+#             conta2 +=1
+#             string += "*"
+
+#     string += "\n"
+
+# print(string)
+   
+
+# Ejercicio 18: Triángulo rectangulo invertido
+
+# Ejemplo para N = 5:
+
+num = int(input("Ingrese un número para dibujar el triángulo rectángulo invertido: "))
 cont = 0
 string = ""
 
 while cont < num:
-    cont+=1
-    string+="*"
-print(f"El número de asteriscos dibujados son {num} y se ve asi : {string}")
+    string += "*" *num
+    string += "\n"
+    num -=1
 
-    
+print(string)
