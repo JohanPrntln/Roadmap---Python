@@ -481,15 +481,186 @@
 
 # Ejercicio 18: Triángulo rectangulo invertido
 
-# Ejemplo para N = 5:
+# # Ejemplo para N = 5:
 
-num = int(input("Ingrese un número para dibujar el triángulo rectángulo invertido: "))
-cont = 0
-string = ""
+# num = int(input("Ingrese un número para dibujar el triángulo rectángulo invertido: "))
+# cont = 0
+# string = ""
 
-while cont < num:
-    string += "*" *num
-    string += "\n"
-    num -=1
+# while cont < num:
+#     string += "*" *num
+#     string += "\n"
+#     num -=1
 
-print(string)
+# print(string)
+
+
+# Ejercicio 19: Cuadrado
+
+# Solicita un tamaño N y dibuja un cuadrado de asteriscos.
+
+# Ejemplo para N = 6:
+# ******
+# ******
+# ******
+# ******
+# ******
+# ******
+
+# num=int(input("Ingresa un número para dibujar el tamaño del cuadrado: "))
+# cont = 0
+# string = ""
+
+# while cont < num:
+#     string+= "*" * num 
+#     string+= "\n"
+#     cont+=1
+# print(string)
+
+# Desafío adicional: intenta dibujar un cuadrado hueco para N = 5:
+
+# *****
+# *   *
+# *   *
+# *   *
+# *****
+
+# num=int(input("Ingresa un número para dibujar el tamaño del cuadrado: "))
+# cont = 0
+# string = ""
+
+
+# while cont < num:
+    
+#     if(cont == 0 or cont == num -1):
+#         string += "\n"
+#         string+= "*" * num
+#     else :
+        
+#         string += "\n"
+#         string+= "*"
+#         string+= " "*(num-2)
+#         string+= "*" 
+    
+#     cont+=1
+        
+# print(string)
+# print(cont)
+
+
+# dame un ejemplo de este ejercicio Ejercicio 20: Pirámide simple Ejemplo para N = 5:
+#       *
+#      ***
+#     *****
+#    *******
+#   *********
+#
+
+# num = int(input("Ingrese un número para dibujar la piramide : "))
+# cont = 0
+# string = ""
+# acum = 1
+
+
+# while cont < num:
+#     if(cont==0):
+#         string+=" " * num  
+#         string+="*"
+#         string+="\n"
+#     if (cont != 0):
+#         acum+=2
+#         string+= " " * (num - cont)
+#         string+="*" * acum
+#         string+="\n"
+#     cont+=1
+    
+    
+#print(string)
+
+# n = int(input("Ingrese la altura de la pirámide: "))
+
+# fila = 1
+
+# while fila <= n:
+#     espacios = n - fila
+#     asteriscos = (2 * fila) - 1
+
+#     print(" " * espacios + "*" * asteriscos)
+
+#     fila += 1
+
+# Ejercicio 23: Fibonacci
+
+# Muestra los primeros N números de Fibonacci.
+
+# Ejemplo:
+
+# 0 1 1 2 3 5 8 13
+
+# La sucesión de Fibonacci es una serie infinita de números donde cada número es la suma de los dos anteriores, comenzando con el 0 y el 1
+# (n>2)
+# (F_n = Fn-1 + Fn-2
+
+# num = int(input("Ingrese número: "))
+# a= 0
+# b = 1
+# cont = 0
+
+# while cont < num :
+#     print(a)
+
+#     siguiente = a + b 
+#     a = b 
+#     b = siguiente 
+#     cont+=1
+    
+    
+
+# Ejercicio 24: Contar dígitos
+
+# Solicita un número y determina cuántos dígitos tiene.
+
+# Ejemplo:
+
+# 12345 → 5 dígitos
+
+
+# num = int(input("Ingrese número: "))
+# cont=0
+# string = ""
+
+# while cont < num:
+#     cont+=1
+
+# numero = int(input("Ingrese un número: "))
+# contador = 0 
+
+
+# while numero > 0:
+#         numero = numero // 10
+#         contador += 1
+
+# print("Cantidad de dígitos:", contador)
+
+# Ejercicio 25: Sumar dígitos
+
+# Solicita un número y suma todos sus dígitos.
+
+# Ejemplo:
+
+# 1234
+
+# 1 + 2 + 3 + 4 = 10
+
+num = int(input("Ingrese un número"))
+suma = 0
+
+
+while num > 0 :
+    digito= num % 10
+    suma+=digito
+    num= num // 10
+    
+
+
+print(f"LA SUMA DE SUS DIGITOS ES : {suma}")
