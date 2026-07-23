@@ -440,3 +440,4 @@ condicionales simples, anidadas
 
 # else:
 #     print("Rechazado, eres menor de 16 años")
+

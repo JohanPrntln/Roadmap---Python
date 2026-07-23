@@ -652,15 +652,121 @@
 
 # 1 + 2 + 3 + 4 = 10
 
-num = int(input("Ingrese un número"))
-suma = 0
+# num = int(input("Ingrese un número"))
+# suma = 0
 
 
-while num > 0 :
-    digito= num % 10
-    suma+=digito
-    num= num // 10
+# while num > 0 :
+#     digito= num % 10
+#     suma+=digito
+#     num= num // 10
     
 
 
-print(f"LA SUMA DE SUS DIGITOS ES : {suma}")
+# print(f"LA SUMA DE SUS DIGITOS ES : {suma}")
+
+
+# 1234  4321
+
+# num=int(input("Ingrese número: ")) #Casting string a un entero
+# string = ""
+
+# while num > 0:
+#     digitos= num % 10
+#     # print(f"{digitos}")
+#     string+=str(digitos)  #Casting  int a un string
+
+#     num = num //10
+    
+# print(string)
+
+# b = float(string)
+
+# print(b * 2 )
+
+# Ejercicio 28: Palíndromo numérico
+
+# Determina si un número se lee igual de izquierda a derecha y viceversa.
+
+# Ejemplo:
+
+# 1221 → Sí
+
+# 1234 → No
+
+#1234 no es palindromo  1221 
+
+# num=int(input("Ingrese número: ")) #1234
+# copia = num
+# string = ""
+
+# while num > 0:
+#     digitos = num % 10 # 2
+#     num = num //10 #1234 123 12 1 0
+#     string+=str(digitos)
+# print(string)
+
+# b = int(string)
+# print(copia)
+# if(copia == b):
+#     print("Es palindromo")
+# else:
+#     print("No es palindromo")
+
+    
+# Ejercicio 29: Conversión decimal a binario
+
+# Convierte un número decimal a binario utilizando divisiones sucesivas.
+
+# Las divisiones sucesivas son un método matemático en el que un número o cociente se divide repetidamente entre un divisor determinado, registrando los residuos en cada paso
+
+# num=int(input("Ingrese número: "))
+# bin=""
+# while num > 0:
+#     residuo = num % 2   #3 1
+#     bin += str(residuo)# "101"
+#     num = num // 2
+    
+# print(bin)
+
+
+
+
+
+# Ejercicio 30: Cajero automático
+
+# Crear un programa que permita:
+
+# Consultar saldo.
+# Depositar dinero.
+# Retirar dinero.
+# Salir.
+
+# Todo controlado mediante un menú con while.
+
+saldoactual = int(input("Ingrese cantidad a ingresar a su cuenta : "))
+
+
+
+while saldoactual > 0:
+    print(("Bienvenido a Bancolombia, estas son tus opciones: \n 0. Consultar saldo actual \n 1. Depositar dinero \n 2. Retirar dinero \n 3. Salir"))
+    opcion=int(input("Ingrese opcion deseada: "))
+
+    match opcion:
+        case 0:
+           print(f"Su saldo actual es : {saldoactual}")
+        case 1:
+            deposito = int(input("Ingrese cantidad deseada : "))
+            saldoactual+=deposito
+        case 2:
+            retiro = int(input("Ingrese cantidad a retirar: "))
+            if(saldoactual < retiro):
+                print("Cantidad insuficiente ;(")
+            else:
+                saldoactual-=retiro
+                print("Dinero retirado :)")
+        case 3:
+            break
+print("Adios")
+
+
